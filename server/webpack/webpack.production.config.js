@@ -47,8 +47,8 @@ module.exports = baseConfig({
           {
             loader: "css-loader",
             options: {
-              modules: false,
-              sourceMap: false,
+              modules: true,
+              sourceMap: true,
               importLoaders: 1,
               localIdentName: "[name]--[local]--[hash:base64:8]"
             }
