@@ -1,0 +1,10 @@
+.icon {
+    fill-opacity: 0;
+    padding: 10px;
+}
+
+.finished {
+    fill-opacity: 1;
+    transition: fill-opacity 1s;
+    padding: 10px;
+}

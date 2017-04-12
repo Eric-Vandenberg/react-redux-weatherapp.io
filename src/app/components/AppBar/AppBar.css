@@ -1,0 +1,5 @@
+@import "./../../../../node_modules/react-toolbox/lib/app_bar/theme.css";
+
+.appBar {
+    background-color: #3F51B5;
+}

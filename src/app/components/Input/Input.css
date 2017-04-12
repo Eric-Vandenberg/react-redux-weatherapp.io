@@ -1,0 +1,6 @@
+@import "../../../../node_modules/react-toolbox/lib/input/theme.css";
+
+.input {
+    min-width: 300px;
+    margin: 10px;
+}

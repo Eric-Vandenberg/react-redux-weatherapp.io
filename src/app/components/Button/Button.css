@@ -1,0 +1,5 @@
+@import "./../../../../node_modules/react-toolbox/lib/button/theme.css";
+
+.button {
+    margin: 10px;
+}
