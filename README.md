@@ -1,6 +1,6 @@
 # react-redux-weatherapp.io
 
-See a [working demo](https://)
+See a [working demo](https://sheltered-ridge-22858.herokuapp.com/)
 
 
 ## Features
@@ -12,7 +12,7 @@ See a [working demo](https://)
 * Proxied API to avoid CORS issues
 * Environment variables configured for Development & Production
 
-##Pre-Reqs##
+## Pre-Reqs
 
 **Clone this repository**
 ```
@@ -78,9 +78,9 @@ git push heroku
 ## Issues
 
 * React PropTypes have been abstracted to it's own npm package
-⋅⋅* The console in development will show an error
-⋅⋅* Warning: Accessing PropTypes via the main React package is deprecated. Use the prop-types package from npm instead.
-⋅⋅* This is under development within this project and it's dependencies React-Toolbox
+..* The console in development will show an error
+..* Warning: Accessing PropTypes via the main React package is deprecated. Use the prop-types package from npm instead.
+..* This is under development within this project and it's dependencies React-Toolbox
 
 ## Contributing
 
