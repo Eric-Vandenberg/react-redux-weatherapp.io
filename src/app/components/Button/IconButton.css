@@ -1,0 +1,5 @@
+@import "./../../../../node_modules/react-toolbox/lib/button/theme.css";
+
+.link {
+    pointer-events: all;
+}

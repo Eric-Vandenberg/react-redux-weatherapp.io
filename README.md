@@ -7,7 +7,7 @@ See a [working demo](https://sheltered-ridge-22858.herokuapp.com/)
 * React, Redux, Webpack2, PostCSS
 * Components styled with [React Toolbox (Material Design)](http://react-toolbox.com/#/components)
 * SVG animation with [Vivus](https://github.com/maxwellito/vivus)
-* Express server wrapping Webpack2 for Development & Production builds
+* Express server wrapping Webpack2 for Development & Production
 * Weather stats automatically display based on user IP address
 * Proxied API to avoid CORS issues
 * Environment variables configured for Development & Production
@@ -77,10 +77,10 @@ git push heroku
 
 ## Issues
 
-* React PropTypes have been abstracted to it's own npm package
-..* The console in development will show an error
-..* Warning: Accessing PropTypes via the main React package is deprecated. Use the prop-types package from npm instead.
-..* This is under development within this project and it's dependencies React-Toolbox
+1. React PropTypes have been abstracted to it's own npm package
+  * The console in development will show an error
+  * Warning: Accessing PropTypes via the main React package is deprecated. Use the prop-types package from npm instead.
+  * This is under development within this project and it's dependencies React-Toolbox
 
 ## Contributing
 

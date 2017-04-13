@@ -48,7 +48,7 @@ class IconComponent extends Component {
   };
 
   render () {
-    let Icon = this.constructor.importComponent(require(`./../../icons/${this.props.icon}`));
+    const Icon = this.constructor.importComponent(require(`./../../icons/${this.props.icon}`));
 
     return (
         <Icon
