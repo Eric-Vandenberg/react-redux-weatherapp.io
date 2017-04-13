@@ -1,6 +1,6 @@
 # react-redux-weatherapp.io
 
-See a [working demo](https://sheltered-ridge-22858.herokuapp.com/)
+See a [working demo](https://www.weatherapp.io)
 
 
 ## Features
@@ -14,12 +14,12 @@ See a [working demo](https://sheltered-ridge-22858.herokuapp.com/)
 
 ## Pre-Reqs
 
-**Clone this repository**
+### Clone this repository
 ```
 git clone https://github.com/Eric-Vandenberg/react-redux-weatherapp.io
 ```
 
-**Setup API_KEY environment variable**
+### Setup API_KEY environment variable
 
 You'll need an API KEY from [Dark Sky Weather API](https://darksky.net/dev/register).
 
@@ -30,21 +30,21 @@ In this file (react-redux-weatherapp.io/.env) set...
 WEATHER_API=<YOUR_API_KEY>
 ```
 
-**Register on Heroku to Deploy (for Production)**
+### Register on Heroku to Deploy (for Production)
 
 Sign up for a free account at [Heroku](https://signup.heroku.com/)
 
-
 That's it!  Now you're ready to run the app.
+
 
 ## Usage (Development)
 
-**Install**
+### Install
 ```
 yarn
 ```
 
-**Run app with hot module replacement**
+### Run app with hot module replacement
 ```
 yarn start
 ```
@@ -54,22 +54,22 @@ yarn start
 
 All from the root of your project...
 
-**Login to your Heroku account**
+### Login to your Heroku account
 ```
 heroku login
 ```
 
-**Create a Heroku Application**
+### Create a Heroku Application
 ```
 heroku create
 ```
 
-**Set Environment Variable**
+### Set Environment Variable
 ```
 heroku config:set WEATHER_API=<YOUR_API_KEY>
 ```
 
-**Push to Deploy**
+### Push to Deploy
 ```
 git push heroku
 ```
