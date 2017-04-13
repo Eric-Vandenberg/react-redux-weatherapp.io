@@ -1,0 +1,5 @@
+@import "./../../../../node_modules/react-toolbox/lib/list/theme.css";
+
+.list {
+    white-space: normal;
+}

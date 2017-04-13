@@ -6,6 +6,8 @@ import _ from 'lodash';
 import { List, ListItem, ListSubHeader, ListDivider } from 'react-toolbox/lib/list';
 import ItemComponent from '../Item/Item';
 
+import theme from './List.css';
+
 class ListComponent extends Component {
 
   constructor (props) {
@@ -116,7 +118,7 @@ class ListComponent extends Component {
 
   render () {
     return (
-        <List>
+        <List theme={theme}>
           <ListSubHeader caption={this.locale()} />
           <ListDivider />
           <ListItem
