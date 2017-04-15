@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import moment from 'moment';
 import _ from 'lodash';
@@ -74,8 +75,8 @@ class ListComponent extends Component {
         formattedValue += Math.round(value / millibarsToHG) + inchesMercury;
         return ItemComponent(formattedValue);
       case 'visibility':
-        formattedValue += Math.round(value);
-        formattedValue += formattedValue == 10 ? distMax : dist;
+        formattedValue += Math.round(value).toString();
+        formattedValue += formattedValue === '10' ? distMax : dist;
         return ItemComponent(formattedValue);
       case 'cloudCover':
         const cover = value * 100;
@@ -133,5 +134,10 @@ class ListComponent extends Component {
 function mapStateToProps ({ weather }) {
   return { weather };
 }
+
+ListComponent.propTypes = {
+  day: PropTypes.object.isRequired,
+  weather: PropTypes.object.isRequired
+};
 
 export default connect(mapStateToProps)(ListComponent);

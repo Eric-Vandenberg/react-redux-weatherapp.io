@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { fetchWeather } from '../../actions/fetchWeather';
@@ -20,8 +21,8 @@ class SearchContainer extends Component {
     this.onFormSubmit = this.onFormSubmit.bind(this);
   }
 
-  componentWillReceiveProps (props) {
-    this.setState({ term: props.ip.zip_code });
+  componentDidMount () {
+    this.setState({ term: this.props.ip.zip_code });
   }
 
   componentWillUpdate (nextProps, nextState) {
@@ -58,5 +59,10 @@ function mapDispatchToProps (dispatch) {
 function mapStateToProps ({ ip }) {
   return { ip };
 }
+
+SearchContainer.propTypes = {
+  fetchWeather: PropTypes.func,
+  ip: PropTypes.object
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SearchContainer);

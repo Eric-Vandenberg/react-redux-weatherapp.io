@@ -80,7 +80,8 @@ git push heroku
 1. React PropTypes have been abstracted to it's own npm package
   * The console in development will show an error
   * Warning: Accessing PropTypes via the main React package is deprecated. Use the prop-types package from npm instead.
-  * This is under development within this project and it's dependencies React-Toolbox
+  * PropTypes within use the correct prop-types package
+  * The React-Toolbox dependency is in the process of updating, see [issue #1410](https://github.com/react-toolbox/react-toolbox/issues/1410)
 
 ## Contributing
 

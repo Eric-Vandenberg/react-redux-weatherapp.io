@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import moment from 'moment';
 
@@ -83,5 +84,9 @@ class WeatherContainer extends Component {
 function mapStateToProps ({ weather }) {
   return { weather };
 }
+
+WeatherContainer.propTypes = {
+  weather: PropTypes.object
+};
 
 export default connect(mapStateToProps)(WeatherContainer);

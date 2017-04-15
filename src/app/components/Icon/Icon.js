@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import Vivus from 'vivus';
 
 import randomAnimation from '../../utils/randomAnimation';
@@ -8,10 +9,10 @@ import theme from './Icons.css';
 class IconComponent extends Component {
 
   static importComponent = (component) => {
-      if (component.hasOwnProperty('default')) {
-          return component.default;
-      }
-      return component;
+    if (component.hasOwnProperty('default')) {
+      return component.default;
+    }
+    return component;
   };
 
   constructor (props) {
@@ -42,9 +43,9 @@ class IconComponent extends Component {
   }
 
   fillIcon = () => {
-      if (this._isMounted) {
-          this.setState({finished: true});
-      }
+    if (this._isMounted) {
+      this.setState({finished: true});
+    }
   };
 
   render () {
@@ -56,9 +57,14 @@ class IconComponent extends Component {
             height="200"
             fill={this.props.color}
             stroke={this.props.color}
-            className={this.state.finished ? theme.finished : theme.icon} />
+            className={this.state.finished ? theme.finished : theme.icon}/>
     );
   }
 }
+
+IconComponent.propTypes = {
+  color: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
+};
 
 export default IconComponent;

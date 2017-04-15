@@ -1,6 +1,7 @@
-import React, { Component } from 'react';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
-import { Input } from 'react-toolbox/lib/input';
+import {Input} from 'react-toolbox/lib/input';
 import theme from './Input.css';
 
 class InputComponent extends Component {
@@ -23,10 +24,15 @@ class InputComponent extends Component {
   render () {
     return (
         <div>
-          <Input theme={theme} type='text' label='Search by city or zip' name='search' value={this.state.search} onChange={this.handleChange.bind(this, 'search')} maxLength={30} autoFocus />
+          <Input theme={theme} type='text' label='Search by city or zip' name='search' value={this.state.search}
+                 onChange={this.handleChange.bind(this, 'search')} maxLength={30} autoFocus/>
         </div>
     );
   }
 }
+
+InputComponent.propTypes = {
+  onSearchTermChange: PropTypes.func.isRequired
+};
 
 export default InputComponent;

@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
-import { fetchIP } from '../../actions/fetchIP';
+import React, {Component} from 'react';
+import PropTypes from 'prop-types';
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
+import {fetchIP} from '../../actions/fetchIP';
 
-import { Snackbar } from 'react-toolbox';
+import {Snackbar} from 'react-toolbox';
 import theme from './Snackbar.css';
 
 class SnackbarComponent extends Component {
@@ -22,13 +23,10 @@ class SnackbarComponent extends Component {
 
   componentDidMount () {
     this._isMounted = true;
-  }
-
-  componentWillReceiveProps (props) {
-      this.setState({
-          active: props.error,
-          message: props.message
-      });
+    this.setState({
+      active: this.props.weather.error,
+      message: this.props.weather.message
+    });
   }
 
   componentWillUnmount () {
@@ -36,14 +34,15 @@ class SnackbarComponent extends Component {
   }
 
   handleSnackbarClick = () => {
-      this.setState({active: false});
+    this.setState({active: false});
+    this.forceUpdate();
   };
 
   handleSnackbarTimeout = () => {
-      if (this._isMounted) {
-          this.setState({active: false});
-      }
-      this.props.fetchIP();
+    if (this._isMounted) {
+      this.setState({active: false});
+    }
+    this.props.fetchIP();
   };
 
   render () {
@@ -65,11 +64,16 @@ class SnackbarComponent extends Component {
 }
 
 function mapDispatchToProps (dispatch) {
-  return bindActionCreators({ fetchIP }, dispatch);
+  return bindActionCreators({fetchIP}, dispatch);
 }
 
-function mapStateToProps ({ weather }) {
-  return { weather };
+function mapStateToProps ({weather}) {
+  return {weather};
 }
+
+SnackbarComponent.propTypes = {
+  fetchIP: PropTypes.func.isRequired,
+  weather: PropTypes.object.isRequired
+};
 
 export default connect(mapStateToProps, mapDispatchToProps)(SnackbarComponent);
