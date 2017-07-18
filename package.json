@@ -79,6 +79,7 @@
   },
   "scripts": {
     "start": "node server",
+    "start:prod": "cross-env NODE_ENV=production node server/deploy",
     "postinstall": "node server/deploy"
   },
   "license": "MIT"

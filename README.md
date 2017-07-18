@@ -1,6 +1,6 @@
 # react-redux-weatherapp.io
 
-See a [working demo](http://www.weatherapp.io)
+See a [working demo](https://www.weatherapp.io/)
 
 
 ## Features
